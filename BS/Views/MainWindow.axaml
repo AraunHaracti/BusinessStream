@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:BS.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="BS.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/business-stream.png"
+        Title="Денежные потоки">
+    
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <ListBox Grid.Column="0"
+                 Background="#ccc9b8"
+                 ItemsSource="{Binding Modules}"
+                 SelectedItem="{Binding SelectedModule, Mode=TwoWay}">
+            
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image Width="32" Height="32" Source="{Binding Picture}" Margin="5"/>
+                        <TextBlock Text="{Binding Name}" Foreground="Black" FontSize="10" HorizontalAlignment="Center"/>    
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        <ContentPresenter Grid.Column="1" 
+                          Content="{Binding UserInterface}" 
+                          x:Name="OutputView"/>
+    </Grid>
+</Window>

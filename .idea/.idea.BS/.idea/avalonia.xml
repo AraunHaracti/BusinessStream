@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="BS/App.axaml" value="BS/BS.csproj" />
+        <entry key="BS/Views/MainUserControls/CategoryListView.axaml" value="BS/BS.csproj" />
+        <entry key="BS/Views/MainUserControls/RecordListView.axaml" value="BS/BS.csproj" />
+        <entry key="BS/Views/MainWindow.axaml" value="BS/BS.csproj" />
+        <entry key="BS/Views/WorkWithListItemWindows/CategoryWorkWithListItemView.axaml" value="BS/BS.csproj" />
+        <entry key="BS/Views/WorkWithListItemWindows/RecordWorkWithListItemView.axaml" value="BS/BS.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
